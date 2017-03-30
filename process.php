@@ -45,24 +45,10 @@ echo <<< HTML
 	
 	<section> <!-- class="flex-container"     ~not needed~ -->
 	    
-	    
-	    
-	    
-	  <!-- this is the day tis is the day that the lord has made that the lord has made, we will
-	  rejoice, we will rejoice and be glad in it -->
-	  <div>
-	        nkajsndkjandkajndkajsndkajsndkajsndk
-      </div>
-	  
-	  
 	    <!--
-	    
-	    
-	    
             <div id="space">
             </div>
-            
-            -->
+        -->
         
 	     <div id="pagePic">  
 	        <!--   picture here (Size of this div will be the same for all pages using it)  -->
