@@ -1,0 +1,304 @@
+
+
+body, header, nav, section, footer {
+	/* border: 1px solid rgb(227, 0, 237); */
+	/* text-align: center; */
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+	/* hides bottom scroll bar */
+	/* overflow-y: scroll; */
+	overflow-x: hidden;
+	margin: 0px;
+	background: rgb(192, 96, 20);
+}
+
+header {
+	height: 100px;
+	background: rgb(192, 96, 20);
+}
+
+li {
+	display: inline;
+}
+
+section {
+	/* height: 525px; */
+	/* no height defaults to
+	the size of the divs within
+	as long as it's relative
+	positioning...
+	 */
+	object-fit: fill;
+	min-height: 662px;
+	background: saddlebrown;
+}
+
+footer {
+	height: 40px;
+	text-align: center;
+	color: white;
+	font-style: italic;
+	background: rgb(192, 96, 20);
+	position: relative;
+}
+
+input {
+	height: 25px;
+	border: rgb(0, 0, 0);
+}
+
+span {
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 2px;
+	color: white;
+	/* font-size: 24px; */
+}
+
+h2 {
+	font-size: 35px;
+	font-weight: 100;
+	font-family: "Lucida Console", Monaco, monospace;
+	color: white;
+}
+
+
+/* ids */
+
+#logo {
+	width: 260px;
+	height: 55px;
+	top: 27px;
+	left: 20px;
+	float: left;
+	position: absolute;
+}
+
+#line {
+	width: 100%;
+	height: 0px;
+	background: white;
+	position: relative;
+}
+
+#loginForm {
+	width: 300px;
+	height: 80px;
+	float: right;
+	top: 10px;
+	display: inline-block;
+	position: relative;
+	right: 24px;
+}
+
+#passInput {
+	left: 6px;
+	position: relative;
+}
+
+#emailSpan, #passSpan {
+	position: relative;
+	font-size: 15px;
+}
+
+#submitButton {
+	border-radius: 10%;
+	background-color: rgb(192, 96, 20);
+	color: white;
+	border: rgb(0, 0, 0);
+	width: 100px;
+	height: 25px;
+	position: relative;
+	top: -2px;
+	left: 77px;
+	font-size: 19px;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic",
+	CenturyGothic, AppleGothic, sans-serif;
+}
+
+#homeimg {
+	width: 50%;
+	/* height: 518px; */
+	height: 100%;
+	position: relative;
+	opacity: 0.9;
+}
+
+#createAccForm {
+	margin: auto;
+	width: 422px;
+	position: relative;
+	top: 10%;
+}
+
+#createAccForm input {
+	position: relative;
+	left: 58px;
+	width: 300px;
+	top: 2px;
+}
+
+#rightSide {
+	position: relative;
+	width: 50%;
+	height: 100%;
+	float: right;
+	background: saddlebrown;
+}
+
+#create {
+	border-radius: 10%;
+	background-color: saddlebrown;
+	color: white;
+	border: rgb(0, 0, 0);
+	width: 100px;
+	height: 30px;
+	position: absolute;
+	top: 77px;
+	left: 1185px;
+	font-size: 20px;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic",
+	CenturyGothic, AppleGothic, sans-serif;
+}
+
+#topLinks {
+	width: 50%;
+	float: right;
+	position: relative;
+	top: 40px;
+	height: 25px;
+}
+
+#topLinks ul {
+	position: relative;
+	text-align: center;
+	margin: auto;
+}
+
+#topLinks ul li a {
+	text-decoration: none;
+	word-spacing: 20px;
+	color: white;
+}
+
+#lineBottom {
+	width: 100%;
+	height: 1px;
+	background: rgb(192, 96, 20);
+	position: relative;
+}
+
+#logout {
+	color: rgb(237, 219, 205);
+}
+
+/* temporary
+div {
+	 background: lightskyblue;
+	position: relative;
+	border: 1px solid black;
+}
+*/
+
+#pagePic {
+	width: 100%;
+	height: 366px;
+	margin: auto;
+	color: white;
+	background: #975220;
+	text-align: center;
+}
+
+#title {
+	margin: auto;
+	width: 95%;
+	height: 60px;
+}
+
+#titleWord {
+	margin: auto;
+	text-align: center;
+}
+
+#content {
+	margin: auto;
+	width: 95%;
+	/* overflow: auto; */
+	color: white;
+	/* border: 1px solid rgb(192, 96, 20); */
+}
+
+#questions {
+	margin: auto;
+	width: 95%;
+	height: 200px;
+	color: white;
+}
+
+#space {
+	height: 25px;
+}
+
+/* color theme:
+
+pastel peach (237, 219, 205)
+ochre	  	 (192, 96, 20)
+black		 (0, 0, 0)
+cool grey	 (206, 206, 206)
+
+*/
+
+p {
+	text-indent: 50px;
+	word-spacing: 2px;
+	font-size: 20px;
+	text-align: justify;
+}
+
+
+#part {
+	/* same size as images */
+	min-height: 250px;
+}
+
+#processPic {
+	width: 550px;
+	position: relative;
+}
+
+/* IMAGES */
+
+#barleyIMG {
+	width: 250px;
+	height: 250px;
+	float: left;
+}
+
+#waterIMG {
+	width: 250px;
+	height: 250px;
+	float: right;
+
+}
+
+#hopsIMG {
+	width: 250px;
+	height: 250px;
+	float: left;
+}
+
+#yeastIMG {
+	width: 250px;
+	height: 250px;
+	float: right;
+}
+/*
+#imgTEXT {
+	margin-left: 39px;
+	padding: 0px;
+	word-spacing: 212px;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 2px;
+}
+*/
