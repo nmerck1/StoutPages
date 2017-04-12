@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fd7d511-5b4a-47b8-ad10-8898296b0af4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/privacy.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/history.php" afterPath="$PROJECT_DIR$/history.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/process.php" afterPath="$PROJECT_DIR$/process.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profile.php" afterPath="$PROJECT_DIR$/profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stats.php" afterPath="$PROJECT_DIR$/stats.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types.php" afterPath="$PROJECT_DIR$/types.php" />
-    </list>
+    <list default="true" id="3fd7d511-5b4a-47b8-ad10-8898296b0af4" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -499,12 +489,12 @@
       <workItem from="1490905418022" duration="1216000" />
       <workItem from="1491964231361" duration="950000" />
       <workItem from="1492006230693" duration="6000" />
-      <workItem from="1492012417325" duration="12187000" />
+      <workItem from="1492012417325" duration="12214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16172000" />
+    <option name="totallyTimeSpent" value="16199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
