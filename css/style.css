@@ -33,6 +33,10 @@ section {
 	object-fit: fill;
 	min-height: 662px;
 	background: saddlebrown;
+	margin: auto;
+	width: 95%;
+	border-bottom: 1px solid white;
+	border-top: 1px solid white;
 }
 
 footer {
@@ -60,11 +64,14 @@ h2 {
 	font-size: 35px;
 	font-weight: 100;
 	font-family: "Lucida Console", Monaco, monospace;
-	color: white;
 }
 
 
 /* ids */
+
+#createAccH2 {
+	color: saddlebrown;
+}
 
 #logo {
 	width: 260px;
@@ -144,11 +151,11 @@ h2 {
 	width: 50%;
 	height: 100%;
 	float: right;
-	background: saddlebrown;
+	background: white;
 }
 
 #create {
-	border-radius: 10%;
+	border-radius: 5px;;
 	background-color: saddlebrown;
 	color: white;
 	border: rgb(0, 0, 0);
@@ -213,12 +220,39 @@ div {
 #title {
 	margin: auto;
 	width: 95%;
-	height: 60px;
+	height: 100px;
+	color: white;
 }
 
 #titleWord {
 	margin: auto;
+	font-size: 45px;
 	text-align: center;
+	border-bottom: 1px solid white;
+	width: 60%;
+}
+
+/* parts in content */
+#ingredients, #malting, #mashing, #boiling,
+#fermentation, #bottling {
+	color: white;
+	margin: auto;
+	position: relative;
+	text-align: center;
+	background: #975220;
+	width: 40%;
+}
+
+#barley {
+	color: white;
+	margin: auto;
+	position: relative;
+	text-align: center;
+}
+
+#harvested {
+	text-align: center;
+	font-family: inherit;
 }
 
 #content {
@@ -302,3 +336,51 @@ p {
 	letter-spacing: 2px;
 }
 */
+
+input {
+	border: 1px solid saddlebrown;
+}
+
+#websiteName {
+	font-family: 'Tangerine', cursive;
+	width: 100px;
+	margin: 0px;
+	font-size: 52px;
+	position: relative;
+	top: 24px;
+	float: left;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+#video {
+	text-align: center;
+}
+
+/* 		// fonts: //
+
+font-family: 'Abel', sans-serif;
+font-family: 'Pompiere', cursive;
+
+ */
+
+#privacyContent {
+	width: 90%;
+	margin: auto;
+	font-size: 25px;
+	text-align: justify;
+	position: relative;
+	top: 25px;
+	margin-bottom: 100px;
+	color: white;
+	font-family: inherit;
+	letter-spacing: 2px;
+}
+
+#privacyTitle {
+	text-align: center;
+}

@@ -12,15 +12,22 @@ echo <<< HTML
 <html>
 
 <head>
+	
+<head>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Tangerine" rel="stylesheet">
 </head>
-
 
 <body>
 
     <header>
-        <img id="logo" src="img/logo.PNG" alt="Website Logo" align="top-left">
     
+        <p id="websiteName">
+            StoutPages
+        </p>
+        <!--
+        <img id="logo" src="img/logo.PNG" alt="Website Logo" align="top-left">
+        -->
         <div id="topLinks">
             <ul>
                 <li><a href="process.php"> PROCESS </a></li>
@@ -64,6 +71,11 @@ echo <<< HTML
         
             <div id="space">
             </div>
+            
+        <h2 id="ingredients">Ingredients</h2>
+            
+            <div id="space">
+            </div>
         
         <div id="content">
             <p>
@@ -73,7 +85,7 @@ echo <<< HTML
             </p>
             
             <div id="space">
-                <h2 style="text-align: center;"> Barley </h2>
+                <h2 id="barley"> Barley </h2>
             </div>
             
             <p id="part">           
@@ -166,18 +178,115 @@ echo <<< HTML
                 flavour of the beer will depend a great deal on the strain of lager yeast and the temperatures at which it was fermented. 
                 Some of the lager styles made from bottom-fermenting yeasts are Pilsners, Dortmunders, Märzen, Bocks, and American malt liquors. 
             </p>
-                    
-         
-                    
-                   
-                    
-                    
-                    
-           <iframe width="420" height="315"
-                src="http://www.youtube.com/watch?v=FttkHVBu2IA">
+                  
+                  
+                  
+                  
+           <p id="video">
+           <iframe width="420" height="315" 
+                src="https://www.youtube.com/embed/FttkHVBu2IA" frameborder="0" allowfullscreen>
+           
            </iframe>
+           </p>
+           
+               <div id="space">
+               </div>
+           
+           <h2 id="malting">Malting</h2>
+           
+               <div id="space">
+               </div>
+           
+           <p>
+                    The brewing process starts with grains, usually barley 
+                (although sometimes wheat, rye or other such things.) The grains 
+                are harvested and processed through a process of heating, drying out
+                and cracking. The main goal of malting is to isolate the enzymes 
+                needed for brewing so that it’s ready for the next step.
+            </p>
             
-          
+               <div id="space">
+               </div>
+               
+            <h2 id="harvested">Harvest >>> Heated & Dried >>> Cracked</h2>
+            
+               <div id="space">
+               </div>
+               
+            <h2 id="mashing">Mashing</h2>
+           
+               <div id="space">
+               </div>
+           
+           <p>
+                    The grains then go through a process known as
+                mashing, in which they are steeped in hot, but not 
+                boiling, water for about an hour, sort of like making 
+                tea. This activates enzymes in the grains that cause it 
+                to break down and release its sugars. Once this is all 
+                done you drain the water from the mash which is now full
+                of sugar from the grains. This sticky, sweet liquid is 
+                called wort. It’s basically unmade beer, sort of like how 
+                dough is unmade bread.
+            </p>
+            
+               <div id="space">
+               </div>
+               
+            <h2 id="boiling">Boiling</h2>
+           
+               <div id="space">
+               </div>
+           
+           <p>
+                    The wort is boiled for about an hour while hops and 
+                other spices are added several times. What are hops?
+                Hops are the small, green cone-like fruit of a vine plant.
+                They provide bitterness to balance out all the sugar in the
+                wort and provide flavor. They also act as a natural 
+                preservative, which is what they were first used for. 
+                (For more info on hops take a look at our section about it above.)
+            </p>
+            
+               <div id="space">
+               </div>
+               
+            <h2 id="fermentation">Fermentation</h2>
+           
+               <div id="space">
+               </div>
+           
+           <p>
+                    Once the hour long boil is over the wort is cooled, 
+                strained and filtered. It’s then put in a fermenting vessel 
+                and yeast is added to it. At this point the brewing is 
+                complete and the fermentation begins. The beer is stored for 
+                a couple of weeks at room temperature (in the case of ales) 
+                or many many weeks at cold temperatures (in the case of lagers) 
+                while the yeast works its fermentation magic. Basically the yeast 
+                eats up all that sugar in the wort and spits out CO2 and alcohol as 
+                waste products.
+            </p>
+            
+                <div id="space">
+                </div>
+               
+            <h2 id="bottling">Bottling & Aging</h2>
+           
+               <div id="space">
+               </div>
+           
+           <p>
+                    You’ve now got alcoholic beer, however it is still 
+                flat and uncarbonated. The flat beer is bottled, at which 
+                time it is either artificially carbonated like a soda, or if 
+                it’s going to be ‘bottle conditioned’ it’s allowed to 
+                naturally carbonate via the CO2 the yeast produces. After 
+                allowing it to age for anywhere from a few weeks to a few 
+                months you drink the beer, and it’s delicious!
+            </p>
+            
+      
             
         </div>   <!--  end content div -->
         
@@ -200,7 +309,7 @@ echo <<< HTML
     </div>
 	
 	<footer>
-	    created by Nathaniel Merck
+	    <a href="privacy.html"> Privacy Policy </a>
 	</footer>
 </body>
 

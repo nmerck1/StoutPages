@@ -14,13 +14,19 @@ echo <<< HTML
 
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Tangerine|Abel|Pompiere" rel="stylesheet">
 </head>
 
 <body>
 
     <header>
     
+        <p id="websiteName">
+            StoutPages
+        </p>
+        <!--
         <img id="logo" src="img/logo.PNG" alt="Website Logo" align="top-left">
+        -->
         
         <form id="loginForm" action="$PHP_SELF" method="post">
             <table>
@@ -48,7 +54,7 @@ echo <<< HTML
             <form id="createAccForm" action="$PHP_SELF" method="post">
                 <table>
                     <tr>
-                        <h2> Create a New Account </h2>
+                        <h2 id="createAccH2"> Create a New Account </h2>
                     </tr>
                     <tr>
                         <input type="text" name="create username" placeholder="Username" required>   <br><br>
@@ -80,12 +86,14 @@ echo <<< HTML
 	    
 	</section>
 	
+
+	
 	<div id="lineBottom">
     </div>
 	
 	
 	<footer>
-	    created by Nathaniel Merck
+	    <a href="privacy.html"> Privacy Policy </a>
 	</footer>
 </body>
 

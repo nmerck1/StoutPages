@@ -13,14 +13,20 @@ echo <<< HTML
 
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Tangerine" rel="stylesheet">
 </head>
-
 
 <body>
 
     <header>
-        <img id="logo" src="img/logo.PNG" alt="Website Logo" align="top-left">
     
+        <p id="websiteName">
+            StoutPages
+        </p>
+        <!--
+        <img id="logo" src="img/logo.PNG" alt="Website Logo" align="top-left">
+        -->
+        
         <div id="topLinks">
             <ul>
                 <li><a href="process.php"> PROCESS </a></li>
@@ -84,7 +90,7 @@ echo <<< HTML
     </div>
 	
 	<footer>
-	    created by Nathaniel Merck
+	    <a href="privacy.html"> Privacy Policy </a>
 	</footer>
 </body>
 
