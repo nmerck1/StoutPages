@@ -85,7 +85,7 @@ echo <<< HTML
                         Name:   Blue Moon
                 <br>    Manufacturer:   Blue Moon Brewing Co.
                 <br>    Origin:    Golden, Colorado (USA)
-                <br>    Type:   IPA (typically)
+                <br>    Type:   Pale Ale
                 <br>    Introduced:    1995
                 <br>    Alcohol:    3.2% - 5.4%
                      
@@ -252,17 +252,80 @@ echo <<< HTML
             <div id="space">
             </div>
         
-        <div id="questions">
-            questions
-            
-            
-            
-            
-            
-            
-        </div> 
         
-            <div id="space">
+        
+        
+        <div id="questions">        <!-- start of questions div  -->
+        
+            <h2 id="questionsTitle">Questions</h2>
+            
+                <div id="space">
+                </div>
+            
+            <div id="Q1">
+                <p>
+                    1. Which beer has the lowest amount of alcohol?
+                </p>
+                
+                <select id="selectItBABY">
+                  <option value="guinness">Guinness</option>
+                  <option value="heineken">Heineken</option>
+                  <option value="bluemoon">Blue Moon</option>      <!-- answer -->
+                  <option value="stone">Stone Pale Ale</option>
+                </select>
+            </div>
+            
+                <div id="space">
+                </div>
+            
+            <div id="Q2">
+                <p>
+                    2. Which beer was introduced in the USA first? 
+                </p>
+                
+                <select id="selectItBABY">
+                  <option value="sierra">Sierra Nevada</option>
+                  <option value="hoegaarden">Hoegaarden</option>
+                  <option value="pilsner">Pilsner Urquell</option>
+                  <option value="yuengling">Yuengling</option>      <!-- answer -->
+                </select>
+            </div>
+            
+                <div id="space">
+                </div>
+            
+            <div id="Q3">
+                <p>
+                    3. Which beer has the highest amount of alcohol?
+                </p>
+                
+                <select id="selectItBABY">
+                  <option value="heineken">Heineken</option>
+                  <option value="guinness">Guinness</option>      <!-- answer -->
+                  <option value="stella">Stella Artois</option>
+                  <option value="stone">Stone Pale Ale</option>
+                </select>
+            </div>
+            
+                <div id="space">
+                </div>
+            
+            <div id="Q4">
+                <p>
+                    4. _______ is an American Lager introduced in 1844.
+                </p>
+                
+                <select id="selectItBABY">
+                  <option value="budweiser">Budweiser</option>
+                  <option value="rock">Rolling Rock</option>      
+                  <option value="samueladams">Samuel Adams</option>
+                  <option value="pbr">Pabst Blue Ribbon</option>       <!-- answer -->      
+                </select>
+            </div>
+            
+            
+        
+            <div id="space">        <!-- end of questions div   -->
             </div>
         
 	</section>
