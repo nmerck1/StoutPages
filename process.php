@@ -36,7 +36,7 @@ echo <<< HTML
                 
                 <li><a href="stats.php"> STATISTICS </a></li>
                 
-                <li><a href="history.php"> HISTORY </a></li>
+                <!-- <li><a href="deleted/history.php"> HISTORY </a></li> -->
                 
                 <li><a href="profile.php"> PROFILE </a></li>
                 

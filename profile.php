@@ -35,7 +35,7 @@ echo <<< HTML
                 
                 <li><a href="stats.php"> STATISTICS </a></li>
                 
-                <li><a href="history.php"> HISTORY </a></li>
+                <!-- <li><a href="deleted/history.php"> HISTORY </a></li> -->
                 
                 <li><a href="profile.php"> PROFILE </a></li>
                 
@@ -73,13 +73,6 @@ echo <<< HTML
         <div id="content">
             content
         </div>
-        
-            <div id="space">
-            </div>
-        
-        <div id="questions">
-            questions
-        </div> 
         
             <div id="space">
             </div>

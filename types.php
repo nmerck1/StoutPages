@@ -34,7 +34,7 @@ echo <<< HTML
                 
                 <li><a href="stats.php"> STATISTICS </a></li>
                 
-                <li><a href="history.php"> HISTORY </a></li>
+                <!--  <li><a href="deleted/history.php"> HISTORY </a></li>  -->
                 
                 <li><a href="profile.php"> PROFILE </a></li>
                 
@@ -322,7 +322,6 @@ echo <<< HTML
                   <option value="pbr">Pabst Blue Ribbon</option>       <!-- answer -->      
                 </select>
             </div>
-            
             
         
             <div id="space">        <!-- end of questions div   -->
