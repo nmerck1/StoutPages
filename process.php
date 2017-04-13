@@ -77,7 +77,8 @@ echo <<< HTML
             <div id="space">
             </div>
         
-        <div id="content">
+        <div id="content">      <!--   start of content div   -->
+        
             <p>
                     Beer is made from four basic ingredients: Barley, water, hops and yeast.
                 The basic idea is to extract the sugars from grains (usually barley) so 
@@ -291,14 +292,81 @@ echo <<< HTML
         </div>   <!--  end content div -->
         
         
-        
-        
             <div id="space">
             </div>
         
         <div id="questions">
-            questions
-        </div> 
+        
+            <h2 id="questionsTitle">Questions</h2>
+            
+                <div id="space">
+                </div>
+            
+            <div id="Q1">
+                <p>
+                    1. Mashing activates ______ in the grains that cause it to
+                     break down and release its sugars.
+                </p>
+                
+                <select id="selectItBABY">
+                  <option value="sugar">Sugar</option>
+                  <option value="enzymes">Enzymes</option>      <!-- answer -->
+                  <option value="alcohol">Alcohol</option>
+                  <option value="wort">Wort</option>
+                </select>
+            </div>
+            
+                <div id="space">
+                </div>
+            
+            <div id="Q2">
+                <p>
+                    2. The term "bottom-fermenting" is associated with ale yeasts. 
+                </p>
+                
+                <select id="selectItBABY">
+                  <option value="FALSE">False</option>      <!-- answer -->
+                  <option value="TRUE">True</option>
+                </select>
+            </div>
+            
+                <div id="space">
+                </div>
+            
+            <div id="Q3">
+                <p>
+                    3. Beer is made from four basic ingredients: 
+                    Barley, water, _____ and yeast.
+                </p>
+                
+                <select id="selectItBABY">
+                  <option value="malt">Malt</option>
+                  <option value="co2">CO2</option>      
+                  <option value="alcohol">Alcohol</option>
+                  <option value="hops">Hops</option>        <!-- answer -->
+                </select>
+            </div>
+            
+                <div id="space">
+                </div>
+            
+            <div id="Q4">
+                <p>
+                    4. Hops provide bitterness to balance out all the sugar
+                     in the wort and provide _____.
+                </p>
+                
+                <select id="selectItBABY">
+                  <option value="enzymes">Enzymes</option>
+                  <option value="co2">CO2</option>      
+                  <option value="flavor">Flavor</option>        <!-- answer -->
+                  <option value="yeast">Yeast</option>        
+                </select>
+            </div>
+            
+            
+            
+        </div>      <!--   end questions div   -->
         
             <div id="space">
             </div>

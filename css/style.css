@@ -210,7 +210,7 @@ div {
 
 #pagePic {
 	width: 100%;
-	height: 366px;
+	/* height: 366px; */
 	margin: auto;
 	color: white;
 	background: #975220;
@@ -234,13 +234,21 @@ div {
 
 /* parts in content */
 #ingredients, #malting, #mashing, #boiling,
-#fermentation, #bottling {
+#fermentation, #bottling, #questionsTitle {
 	color: white;
 	margin: auto;
 	position: relative;
 	text-align: center;
 	background: #975220;
 	width: 40%;
+}
+
+#questions {
+	background: #975220;
+	min-height: 650px;
+	margin: auto;
+	width: 95%;
+	color: white;
 }
 
 #barley {
@@ -261,13 +269,6 @@ div {
 	/* overflow: auto; */
 	color: white;
 	/* border: 1px solid rgb(192, 96, 20); */
-}
-
-#questions {
-	margin: auto;
-	width: 95%;
-	height: 200px;
-	color: white;
 }
 
 #space {
@@ -327,6 +328,19 @@ p {
 	height: 250px;
 	float: right;
 }
+
+/* types page images */
+
+#guinnessIMG, #bluemoonIMG, #samueladamsIMG,
+#heinekenIMG, #coronaIMG, #stellaIMG, #budweiserIMG,
+#sierraIMG, #yuenglingIMG, #hoegaardenIMG,
+#pilsnerIMG, #pbrIMG, #coorsIMG, #stoneIMG,
+#rockIMG {
+	width: 250px;
+	height: 250px;
+	float: left;
+}
+
 /*
 #imgTEXT {
 	margin-left: 39px;
@@ -383,4 +397,33 @@ font-family: 'Pompiere', cursive;
 
 #privacyTitle {
 	text-align: center;
+}
+
+#selectItBABY {
+	width: 200px;
+	height: 40px;
+	border: 4px solid black;
+	font-size: 25px;
+	color: white;
+	margin: auto;
+	background: rgb(151, 82, 32);
+}
+
+#Q1, #Q2, #Q3, #Q4 {
+	position: relative;
+	margin: auto;
+	text-align: center;
+	width: 90%;
+}
+
+#typesPic {
+	width: 808px;
+	position: relative;
+}
+
+#typesPart {
+	text-indent: 0px;
+	font-family: monospace;
+	font-size: 30px;
+	min-height: 270px;
 }
