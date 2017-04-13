@@ -11,8 +11,11 @@ echo <<< HTML
 <html>
 
 <head>
+    <!--        CSS Styling         -->
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Tangerine" rel="stylesheet">
+    <!--        JavaScript      -->
+    
 </head>
 
 <body>
@@ -52,9 +55,6 @@ echo <<< HTML
 	        <div id="space">
             </div>
         
-            <div id="space">
-            </div>
-        
         <div id="title">
             <h2 id="titleWord"> Statistics </h2>
         </div>
@@ -63,7 +63,14 @@ echo <<< HTML
             </div>
         
         <div id="content">
-            content
+            
+            
+            
+            
+            
+            
+            
+            
         </div>
         
         
