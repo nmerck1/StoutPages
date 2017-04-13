@@ -55,23 +55,49 @@ echo <<< HTML
             <div id="space">
             </div>
         
-	    <div id="pagePic">
-	        <!--   picture here (Size of this div will be the same for all pages using it)  -->
-	        pagePic
-        </div>
-        
-            <div id="space">
-            </div>
-        
         <div id="title">
             <h2 id="titleWord"> Profile </h2>
         </div>
         
-            <div id="space">
-            </div>
         
         <div id="content">
-            content
+            
+            <p id="profileInfo">           
+                <img id="profileIMG" src="img/profileimg.png" align="top" hspace="20">
+        
+                <br>    nmerck1
+                <br>    Nathaniel Merck
+                <br>    nmerck1@tctc.edu
+                <br>
+                <br>
+                <br>
+                <br>    <button id="profPic">Change Profile Picture</button>
+                <br>
+                <br>    Favorite Beer Choice:   
+                
+                <select id="selectItBABY">
+                  <option value="guinness">Guinness</option>
+                  <option value="bluemoon">Blue Moon</option>      
+                  <option value="samueladams">Samuel Adams</option>
+                  <option value="heineken">Heineken</option> 
+                     
+                  <option value="corona">Corona</option>
+                  <option value="stella">Stella Artois</option>      
+                  <option value="budweiser">Budweiser</option>
+                  <option value="sierra">Sierra Nevada</option>  
+                  
+                  <option value="yuengling">Yuengling</option>
+                  <option value="hoegaarden">Hoegaarden</option>      
+                  <option value="pilsner">Pilsner Urquell</option>
+                  <option value="pbr">Pabst Blue Ribbon</option>  
+                  
+                  <option value="coors">Coors Light</option>
+                  <option value="stone">Stone Pale Ale</option>      
+                  <option value="rock">Rolling Rock</option>
+                </select>
+            
+            </p>
+            
         </div>
         
             <div id="space">

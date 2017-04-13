@@ -63,7 +63,7 @@ span {
 h2 {
 	font-size: 35px;
 	font-weight: 100;
-	font-family: "Lucida Console", Monaco, monospace;
+	/* font-family: 'Abel', sans-serif; */
 }
 
 
@@ -298,6 +298,12 @@ p {
 	min-height: 250px;
 }
 
+#profileInfo {
+	min-height: 250px;
+	font-size: 35px;
+	text-indent: 0px;
+}
+
 #processPic {
 	width: 550px;
 	position: relative;
@@ -336,7 +342,7 @@ p {
 #heinekenIMG, #coronaIMG, #stellaIMG, #budweiserIMG,
 #sierraIMG, #yuenglingIMG, #hoegaardenIMG,
 #pilsnerIMG, #pbrIMG, #coorsIMG, #stoneIMG,
-#rockIMG {
+#rockIMG, #profileIMG {
 	width: 250px;
 	height: 250px;
 	float: left;
@@ -444,4 +450,16 @@ font-family: 'Pompiere', cursive;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
+
+
+#profileIMG {
+	border: 1px solid white;
+}
+
+#profPic {
+	font-size: 20px;
+	background: saddlebrown;
+	border: navajowhite;
+	color: #d4d4d4;
 }
