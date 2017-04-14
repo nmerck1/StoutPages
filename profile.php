@@ -67,7 +67,7 @@ echo <<< HTML
         
                 <br>    nmerck1
                 <br>    Nathaniel Merck
-                <br>    nmerck1@tctc.edu
+                <br> <!--   nmerck1@tctc.edu    -->
                 <br>
                 <br>
                 <br>

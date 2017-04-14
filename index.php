@@ -65,12 +65,14 @@ echo <<< HTML
                     <tr>
                         <input type="text" name="last name" placeholder="Last name"  required>   <br><br>
                     </tr>
+                    <!--
                     <tr>
                         <input type="email" name="register email" placeholder="Email" required>   <br><br>
                     </tr>
                     <tr>
                         <input type="email" name="re-enter email" placeholder="Re-enter Email"  required>    <br><br>
                     </tr>
+                    -->
                     <tr>
                         <input type="password" name="register password" placeholder="Password" required>   <br><br>
                     </tr>
