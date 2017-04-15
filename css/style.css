@@ -467,3 +467,22 @@ font-family: 'Pompiere', cursive;
 #donutchart {
 	margin: auto;
 }
+
+#selectFavBeer {
+	text-align: center;
+	font-size: 22px;
+	word-spacing: 20px;
+}
+
+#saveButton {
+	border-radius: 5px;
+	background-color: #613e27;
+	color: white;
+	border: rgb(0, 0, 0);
+	width: 100px;
+	height: 35px;
+	font-size: 20px;
+	font-family: "Avant Garde", Avantgarde,
+	"Century Gothic", CenturyGothic,
+	AppleGothic, sans-serif;
+}

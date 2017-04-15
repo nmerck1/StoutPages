@@ -7,6 +7,8 @@
 
 $PHP_SELF = htmlspecialchars($_SERVER['PHP_SELF']);
 
+include("library.php");
+
 echo <<< HTML
 
 <html>
@@ -75,27 +77,41 @@ echo <<< HTML
                 <br>
                 <br>    Favorite Beer Choice:   
                 
-                <select id="selectItBABY">
-                  <option value="guinness">Guinness</option>
-                  <option value="bluemoon">Blue Moon</option>      
-                  <option value="samueladams">Samuel Adams</option>
-                  <option value="heineken">Heineken</option> 
-                     
-                  <option value="corona">Corona</option>
-                  <option value="stella">Stella Artois</option>      
-                  <option value="budweiser">Budweiser</option>
-                  <option value="sierra">Sierra Nevada</option>  
-                  
-                  <option value="yuengling">Yuengling</option>
-                  <option value="hoegaarden">Hoegaarden</option>      
-                  <option value="pilsner">Pilsner Urquell</option>
-                  <option value="pbr">Pabst Blue Ribbon</option>  
-                  
-                  <option value="coors">Coors Light</option>
-                  <option value="stone">Stone Pale Ale</option>      
-                  <option value="rock">Rolling Rock</option>
-                </select>
-            
+                <form id="selectFavBeer" action="$PHP_SELF" method="get">
+                    <!-- <select id="selectItBABY">  -->
+                      <input type="radio" name="beerName" value="Guinness">Guinness</input>
+                      <input type="radio" name="beerName" value="BlueMoon">Blue Moon</input>
+                      <input type="radio" name="beerName" value="SamuelAdams">Samuel Adams</input>
+                      <input type="radio" name="beerName" value="Heineken">Heineken</input> 
+                         
+                      <input type="radio" name="beerName" value="Corona">Corona</input>
+                      <input type="radio" name="beerName" value="StellaArtois">Stella Artois</input>      
+                      <input type="radio" name="beerName" value="Budweiser">Budweiser</input>
+                      <input type="radio" name="beerName" value="SierraNevada">Sierra Nevada</input>  
+                      
+                      <input type="radio" name="beerName" value="Yuengling">Yuengling</input>
+                      <input type="radio" name="beerName" value="Hoegaarden">Hoegaarden</input>      
+                      <input type="radio" name="beerName" value="PilsnerUrquell">Pilsner Urquell</input>
+                      <input type="radio" name="beerName" value="PBR">Pabst Blue Ribbon</input>  
+                      
+                      <input type="radio" name="beerName" value="CoorsLight">Coors Light</input>
+                      <input type="radio" name="beerName" value="StonePaleAle">Stone Pale Ale</input>      
+                      <input type="radio" name="beerName" value="RollingRock">Rolling Rock</input>
+                    <!--  </select>  -->
+                    
+                    <input id="saveButton" type="submit" name="submit" value="Save">  
+                </form>
+                
+HTML;
+
+                if (isset($_GET['beerName']) && $_GET['beerName']!=NULL){
+                    $beerName = $_GET['beerName'];
+                    echo $beerName;
+                }
+
+
+echo <<< HTML
+ 
             </p>
             
         </div>
@@ -117,4 +133,3 @@ echo <<< HTML
 </html>
 
 HTML;
-

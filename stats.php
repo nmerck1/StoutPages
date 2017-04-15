@@ -3,8 +3,8 @@
  *      Programmer:  Nathaniel Merck
  */
 
+include("library.php");
 
-$PHP_SELF = htmlspecialchars($_SERVER['PHP_SELF']);
 
 echo <<< HTML
 
@@ -23,12 +23,12 @@ echo <<< HTML
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Beer', 'Votes'],
-          ['Guinness',          2],
+          ['Guinness',          5],
           ['Blue Moon',         2],
-          ['Samuel Adams',      2],
-          ['Heineken',          2],
+          ['Samuel Adams',      5],
+          ['Heineken',          5],
           ['Corona',            2],
-          ['Stella Artois',     2],
+          ['Stella Artois',     8],
           ['Budweiser',         2],
           ['Sierra Nevada',     2],
           ['Yuengling',         2],
