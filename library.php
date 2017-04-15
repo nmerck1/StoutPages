@@ -5,7 +5,7 @@
  *      Title:       Function Library
  */
 
-session_start();
+
 
 /*   Function:          connectDB
  *   Last modified:     4-14-17
@@ -66,7 +66,7 @@ function userExists($un, $txt){
     $txt = md5($txt);			// encrypt what the user entered, to see if it matches the encryption in the database
 
     $result =mysqli_query(connectDB(),
-        "SELECT * FROM ntm_user WHERE username = '$un' AND pword = '$txt'; ");
+        "SELECT * FROM ACCOUNT WHERE ACC_UNAME = '$un' AND ACC_PASS = '$txt'; ");
 
     if ( mysqli_num_rows($result) == 1 ){
         return true;
@@ -93,3 +93,31 @@ function pullVotes($beer){
         return NULL;
     }
 }
+
+/*   Function:          setFavBeer
+ *   Last modified:     4-14-17
+ *   Description:       returns the amount of votes based on the beer name given: '$beer'.
+ */
+
+function setFavBeer($uname, $beer){
+
+    $result =mysqli_query(connectDB(),
+        "UPDATE ACCOUNT SET ACC_BEER = '$beer' WHERE ACC_UNAME = '$uname'; ");
+
+    if ( $result ){
+        return true;
+    }
+    else {
+        return false;
+    }
+
+}
+/*
+function setName($n){
+    $name = $n;
+}
+
+function getName(){
+    return $name;
+}
+*/

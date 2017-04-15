@@ -106,7 +106,10 @@ HTML;
 
                 if (isset($_GET['beerName']) && $_GET['beerName']!=NULL){
                     $beerName = $_GET['beerName'];
-                    echo $beerName;
+
+                    if( setFavBeer($_SESSION['name'], $beerName) == true) {
+                        echo $beerName . " saved to account";
+                    }
                 }
 
 
