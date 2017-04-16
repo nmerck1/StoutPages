@@ -119,15 +119,20 @@ function setFavBeer($uname, $beer){
  */
 
 function getFirstName($uname){
-    $result =mysqli_query(connectDB(),
-        "SELECT ACC_FNAME FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ");
 
-    if ( mysqli_num_rows($result) == 1 ){
-        return $result;
+    $sql = "SELECT ACC_FNAME FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ";
+    $result =mysqli_query(connectDB(), $sql);
+
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo " ". $row["ACC_FNAME"];
+        }
+    } else {
+        echo "0 results";
     }
-    else {
-        return NULL;
-    }
+
 }
 
 /*   Function:          getLastName
@@ -136,13 +141,39 @@ function getFirstName($uname){
  */
 
 function getLastName($uname){
-    $result =mysqli_query(connectDB(),
-        "SELECT ACC_LNAME FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ");
+    $sql = "SELECT ACC_LNAME FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ";
+    $result =mysqli_query(connectDB(), $sql);
 
-    if ( mysqli_num_rows($result) == 1 ){
-        return $result;
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo " ". $row["ACC_LNAME"];
+        }
+    } else {
+        echo "0 results";
     }
-    else {
-        return NULL;
-    }
+
 }
+
+/*   Function:          getFavBeer
+ *   Last modified:     4-16-17
+ *   Description:       returns the favorite beer associated with the username provided.
+ */
+
+function getFavBeer($uname){
+    $sql = "SELECT ACC_BEER FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ";
+    $result =mysqli_query(connectDB(), $sql);
+
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "Favorite Beer: ". $row["ACC_BEER"];
+        }
+    } else {
+        echo "0 results";
+    }
+
+}
+

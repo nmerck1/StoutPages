@@ -12,6 +12,7 @@ session_start();
 
 include("library.php");
 
+// resets everything
 $_SESSION['userin'] = false;
 $_SESSION['name'] = " ";
 $_SESSION['fname'] = " ";
@@ -47,47 +48,11 @@ if ( userExists($username, $password) == true ){
     $_SESSION['fname'] = getFirstName("$username");
     $_SESSION['lname'] = getLastName("$username");
 
-    echo "logged in!";
+   // echo "logged in!";
 
     header("Location: process.php");
     exit();
 }
-
-/*      REGISTER        */
-
-$check = 0;
-
-if ( isValidPass($createUsername, $registerPassword, $reenterPassword) == true ){
-    echo "valid password <br>";
-    ++$check;
-}
-else {
-    echo "not a valid password <br>";
-}
-
-if ( isValidUsername($createUsername, $registerPassword) == true ){
-    echo "valid username <br>";
-    ++$check;
-    echo "checks: $check";
-}
-else {
-    echo "not a valid username, or already exists <br>";
-}
-
-if ( $check > 1 ){
-    // put account in the database
-    $registerPassword = md5($registerPassword);			// encrypts password
-
-    $sql =  " INSERT INTO ACCOUNT (ACC_UNAME, ACC_PASS, ACC_FNAME, ACC_LNAME) 
-                          VALUES ('$createUsername', '$registerPassword', '$firstName', '$lastName'); ";
-    mysqli_query(connectDB(), $sql);
-
-    echo "account created!";
-
-    header("Location: index.php");
-    exit();
-}
-
 
 echo <<< HTML
 
@@ -166,6 +131,45 @@ echo <<< HTML
                 </table>
             </form>
 	    </div>
+HTML;
+            /*      REGISTER        */
+
+            $check = 0;
+
+            if ( isValidPass($createUsername, $registerPassword, $reenterPassword) == true ){
+                echo "valid password. Meets all requirements <br>";
+                ++$check;
+            }
+            else {
+                echo "not a valid password. Must be at least 4 letters, contain at least one capital letter and a number. <br>";
+                echo "(cannot contain any special characters). <br>";
+            }
+
+            if ( isValidUsername($createUsername, $registerPassword) == true ){
+                //echo "valid username <br>";
+                ++$check;
+                echo "checks: $check";
+            }
+            else {
+                echo "not a valid username, or already exists. Must be at least 4 letters long and contain at least one number <br>";
+            }
+
+            if ( $check > 1 ){
+                // put account in the database
+                $registerPassword = md5($registerPassword);			// encrypts password
+
+                $sql =  " INSERT INTO ACCOUNT (ACC_UNAME, ACC_PASS, ACC_FNAME, ACC_LNAME) 
+                                      VALUES ('$createUsername', '$registerPassword', '$firstName', '$lastName'); ";
+                mysqli_query(connectDB(), $sql);
+
+                echo "account created!";
+
+                header("Location: index.php");
+                exit();
+            }
+
+
+echo <<< HTML
 	    
 	</section>
 	

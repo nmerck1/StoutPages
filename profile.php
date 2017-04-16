@@ -80,9 +80,12 @@ HTML;
                 echo "<br>";
                 echo $_SESSION['name'];
                 echo "<br>";
+
                 echo getFirstName($_SESSION['name']) ;
                 echo getLastName($_SESSION['name']);
 
+                echo "<br>";
+                echo  getFavBeer($_SESSION['name']);
 
 echo <<< HTML
                 <br> <!--   nmerck1@tctc.edu    -->
@@ -91,7 +94,7 @@ echo <<< HTML
                 <br>
                 <br>    <button id="profPic">Change Profile Picture</button>
                 <br>
-                <br>    Favorite Beer Choice:   
+                <br>    Choose your favorite beer:   
                 
                 <form id="selectFavBeer" action="$PHP_SELF" method="get">
                     <!-- <select id="selectItBABY">  -->
@@ -126,6 +129,7 @@ HTML;
 
                     if( setFavBeer($_SESSION['name'], $beerName) == true) {
                         echo $beerName . " saved to account";
+                        header("Location: profile.php");
                     }
                 }
 
