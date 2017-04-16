@@ -7,6 +7,17 @@
 
 $PHP_SELF = htmlspecialchars($_SERVER['PHP_SELF']);
 
+session_start();
+
+include("library.php");
+
+if ($_SESSION['userin'] == true) {
+    echo "logged in";
+} else {
+    header("Location: index.php");
+    exit();
+}
+
 echo <<< HTML
 
 <html>

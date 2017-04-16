@@ -14,6 +14,8 @@ include("library.php");
 
 $_SESSION['userin'] = false;
 $_SESSION['name'] = " ";
+$_SESSION['fname'] = " ";
+$_SESSION['lname'] = " ";
 
 connectDB();
 
@@ -23,34 +25,27 @@ $username = $password = $createUsername = $firstName = $lastName = $registerPass
 if (isset($_GET['createUsername']) && isset($_GET['firstName']) && isset($_GET['lastName']) &&
     isset($_GET['registerPassword']) && isset($_GET['reenterPassword'])    ) {
 
-    echo "variables are set". "<br>";
-} else {
-    echo "variables are NOT set". "<br>";
-
-
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "GET"){
-    /*
-    // login variables
-    $username = $_GET['lUsername'];
-    $password = $_GET['lPass'];
-
-    // register variables
     $createUsername = $_GET['createUsername'];
     $firstName = $_GET['firstName'];
     $lastName = $_GET['lastName'];
     $registerPassword = $_GET['registerPassword'];
     $reenterPassword = $_GET['reenterPassword'];
-    */
 
-} else {
-    // nothing happens   (the else statement makes it so that there aren't any errors on the page)
+    echo "variables are set". "<br>";
 }
+
+if (isset($_GET['lUsername']) && isset($_GET['lPass'])) {
+    $username = $_GET['lUsername'];
+    $password = $_GET['lPass'];
+}
+
 
 if ( userExists($username, $password) == true ){
     $_SESSION['userin'] = true;
     $_SESSION['name'] = "$username";
+
+    $_SESSION['fname'] = getFirstName("$username");
+    $_SESSION['lname'] = getLastName("$username");
 
     echo "logged in!";
 

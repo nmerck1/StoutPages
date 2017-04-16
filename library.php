@@ -112,12 +112,37 @@ function setFavBeer($uname, $beer){
     }
 
 }
-/*
-function setName($n){
-    $name = $n;
+
+/*   Function:          getFirstName
+ *   Last modified:     4-16-17
+ *   Description:       returns the first name associated with the username provided.
+ */
+
+function getFirstName($uname){
+    $result =mysqli_query(connectDB(),
+        "SELECT ACC_FNAME FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ");
+
+    if ( mysqli_num_rows($result) == 1 ){
+        return $result;
+    }
+    else {
+        return NULL;
+    }
 }
 
-function getName(){
-    return $name;
+/*   Function:          getLastName
+ *   Last modified:     4-16-17
+ *   Description:       returns the last name associated with the username provided.
+ */
+
+function getLastName($uname){
+    $result =mysqli_query(connectDB(),
+        "SELECT ACC_LNAME FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ");
+
+    if ( mysqli_num_rows($result) == 1 ){
+        return $result;
+    }
+    else {
+        return NULL;
+    }
 }
-*/

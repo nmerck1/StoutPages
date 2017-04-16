@@ -3,7 +3,16 @@
  *      Programmer:  Nathaniel Merck
  */
 
+session_start();
+
 include("library.php");
+
+if ($_SESSION['userin'] == true) {
+    echo "logged in";
+} else {
+    header("Location: index.php");
+    exit();
+}
 
 
 echo <<< HTML

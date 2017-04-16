@@ -7,7 +7,16 @@
 
 $PHP_SELF = htmlspecialchars($_SERVER['PHP_SELF']);
 
+session_start();
+
 include("library.php");
+
+if ($_SESSION['userin'] == true) {
+    echo "logged in";
+} else {
+    header("Location: index.php");
+    exit();
+}
 
 echo <<< HTML
 
@@ -66,9 +75,16 @@ echo <<< HTML
             
             <p id="profileInfo">           
                 <img id="profileIMG" src="img/profileimg.png" align="top" hspace="20">
-        
-                <br>    nmerck1
-                <br>    Nathaniel Merck
+             
+HTML;
+                echo "<br>";
+                echo $_SESSION['name'];
+                echo "<br>";
+                echo getFirstName($_SESSION['name']) ;
+                echo getLastName($_SESSION['name']);
+
+
+echo <<< HTML
                 <br> <!--   nmerck1@tctc.edu    -->
                 <br>
                 <br>
@@ -103,6 +119,7 @@ echo <<< HTML
                 </form>
                 
 HTML;
+                $beerName = "";
 
                 if (isset($_GET['beerName']) && $_GET['beerName']!=NULL){
                     $beerName = $_GET['beerName'];
