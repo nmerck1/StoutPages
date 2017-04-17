@@ -12,7 +12,7 @@ session_start();
 include("library.php");
 
 if ($_SESSION['userin'] == true) {
-    echo "logged in";
+    //echo "logged in";
 } else {
     header("Location: index.php");
     exit();
@@ -92,7 +92,7 @@ echo <<< HTML
                 <br>
                 <br>
                 <br>
-                <br>    <button id="profPic">Change Profile Picture</button>
+                <br>    <!--   <button id="profPic">Change Profile Picture</button>      // ADD LATER   -->
                 <br>
                 <br>    Choose your favorite beer:   
                 
@@ -118,7 +118,7 @@ echo <<< HTML
                       <input type="radio" name="beerName" value="RollingRock">Rolling Rock</input>
                     <!--  </select>  -->
                     
-                    <input id="saveButton" type="submit" name="submit" value="Save">  
+                    <br><br><input id="saveButton" type="submit" name="submit" value="Save">  
                 </form>
                 
 HTML;
@@ -142,6 +142,36 @@ echo <<< HTML
         
             <div id="space">
             </div>
+            
+            <!--                                                // ADD LATER
+        <form action="index.php" method="get">
+            <br><br><input id="saveButton" type="submit" name="delete" value="Delete Account"> 
+        </form>
+            -->
+        
+        
+HTML;
+                $delete = "";
+
+                if (isset($_GET['delete'])){
+                    $delete = $_GET['delete'];
+                }
+
+                if ($delete == "Delete Account"){
+                    deleteAccount($_SESSION['name']);
+                    echo "account deleted?";
+
+                    header("index.php");
+                    exit();
+
+
+                } else {
+                    //echo "<br> account could not be deleted!";
+                }
+
+
+echo <<< HTML
+
         
 	</section>
 	

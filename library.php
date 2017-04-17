@@ -177,3 +177,40 @@ function getFavBeer($uname){
 
 }
 
+
+/*   Function:          getBeerVotes
+ *   Last modified:     4-16-17
+ *   Description:       returns the votes from the database from the beer name given.
+ */
+
+function getBeerVotes($beerName){
+    $sql = "SELECT STAT_VOTES FROM STATS WHERE STAT_NAME = '$beerName'; ";
+    $result =mysqli_query(connectDB(), $sql);
+
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo $row["STAT_VOTES"];
+        }
+    } else {
+        echo "0 results";
+    }
+}
+
+/*   Function:          deleteAccount
+ *   Last modified:     4-17-17
+ *   Description:       deletes the account in the database associated with the username provided.
+ */
+
+function deleteAccount($uname){
+    $sql = "DELETE FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ";
+    $result =mysqli_query(connectDB(), $sql);
+
+    if ($result->num_rows == 1) {
+       return true;
+    } else {
+        return false;
+    }
+
+}

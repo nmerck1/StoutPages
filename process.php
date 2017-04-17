@@ -12,7 +12,7 @@ session_start();
 include("library.php");
 
 if ($_SESSION['userin'] == true) {
-    echo "logged in";
+    //echo "logged in";
 } else {
     header("Location: index.php");
     exit();
@@ -315,69 +315,136 @@ echo <<< HTML
             
                 <div id="space">
                 </div>
-            
-            <div id="Q1">
-                <p>
-                    1. Mashing activates ______ in the grains that cause it to
-                     break down and release its sugars.
-                </p>
                 
-                <select id="selectItBABY">
-                  <option value="sugar">Sugar</option>
-                  <option value="enzymes">Enzymes</option>      <!-- answer -->
-                  <option value="alcohol">Alcohol</option>
-                  <option value="wort">Wort</option>
-                </select>
-            </div>
+            <form id="selectFavBeer" action="$PHP_SELF" method="get">
             
-                <div id="space">
+                <div id="Q1">
+                    <p>
+                        1. Mashing activates ______ in the grains that cause it to
+                         break down and release its sugars.
+                    </p>
+                    
+                    
+                     <input type="radio" name="Question1" value="sugar">Sugar</input>
+                     <input type="radio" name="Question1" value="enzymes">Enzymes</input>      <!-- answer -->
+                     <input type="radio" name="Question1" value="alcohol">Alcohol</input>
+                     <input type="radio" name="Question1" value="wort">Wort</input>
+                       
+                    
+HTML;
+                    $q1 = "";
+
+                    if (isset( $_GET['Question1'])  ) {
+                        $q1 = $_GET['Question1'];
+                    }
+
+                    if ($q1 == "enzymes"){
+                        echo "<br> answer is correct!";
+                    } else {
+                        echo "<br> incorrect!";
+                    }
+
+    echo <<< HTML
+                  <!-- </form>  -->   
                 </div>
-            
-            <div id="Q2">
-                <p>
-                    2. The term "bottom-fermenting" is associated with ale yeasts. 
-                </p>
                 
-                <select id="selectItBABY">
-                  <option value="FALSE">False</option>      <!-- answer -->
-                  <option value="TRUE">True</option>
-                </select>
-            </div>
-            
-                <div id="space">
+                    <div id="space">
+                    </div>
+                
+                <div id="Q2">
+                    <p>
+                        2. The term "bottom-fermenting" is associated with ale yeasts. 
+                    </p>
+                    
+                    
+                    <input type="radio" name="Question2" value="FALSE">False</input>      <!-- answer -->
+                    <input type="radio" name="Question2" value="TRUE">True</input>
+                    
+HTML;
+                    $q2 = "";
+
+                    if (isset( $_GET['Question2'])  ) {
+                        $q2 = $_GET['Question2'];
+                    }
+
+                    if ($q2 == "FALSE"){
+                        echo "<br> answer is correct!";
+                    } else {
+                        echo "<br> incorrect!";
+                    }
+echo <<< HTML
+    
+                  
+                  
                 </div>
-            
-            <div id="Q3">
-                <p>
-                    3. Beer is made from four basic ingredients: 
-                    Barley, water, _____ and yeast.
-                </p>
                 
-                <select id="selectItBABY">
-                  <option value="malt">Malt</option>
-                  <option value="co2">CO2</option>      
-                  <option value="alcohol">Alcohol</option>
-                  <option value="hops">Hops</option>        <!-- answer -->
-                </select>
-            </div>
-            
-                <div id="space">
+                    <div id="space">
+                    </div>
+                
+                <div id="Q3">
+                    <p>
+                        3. Beer is made from four basic ingredients: 
+                        Barley, water, _____ and yeast.
+                    </p>
+                    
+                    
+                    <input type="radio" name="Question3" value="malt">Malt</input>
+                    <input type="radio" name="Question3" value="co2">CO2</input>      
+                    <input type="radio" name="Question3" value="alcohol">Alcohol</input>
+                    <input type="radio" name="Question3" value="hops">Hops</input>        <!-- answer -->
+                    
+HTML;
+                    $q3 = "";
+
+                    if (isset( $_GET['Question3'])  ) {
+                        $q3 = $_GET['Question3'];
+                    }
+
+                    if ($q3 == "hops"){
+                        echo "<br> answer is correct!";
+                    } else {
+                        echo "<br> incorrect!";
+                    }
+
+echo <<< HTML
+                    
+                    
                 </div>
-            
-            <div id="Q4">
-                <p>
-                    4. Hops provide bitterness to balance out all the sugar
-                     in the wort and provide _____.
-                </p>
                 
-                <select id="selectItBABY">
-                  <option value="enzymes">Enzymes</option>
-                  <option value="co2">CO2</option>      
-                  <option value="flavor">Flavor</option>        <!-- answer -->
-                  <option value="yeast">Yeast</option>        
-                </select>
-            </div>
-            
+                    <div id="space">
+                    </div>
+                
+                <div id="Q4">
+                    <p>
+                        4. Hops provide bitterness to balance out all the sugar
+                         in the wort and provide _____.
+                    </p>
+                    
+                    
+                      <input type="radio" name="Question4" value="enzymes">Enzymes</input>
+                      <input type="radio" name="Question4" value="co2">CO2</input>      
+                      <input type="radio" name="Question4" value="flavor">Flavor</input>        <!-- answer -->
+                      <input type="radio" name="Question4" value="yeast">Yeast</input>      
+                       
+HTML;
+                    $q4 = "";
+
+                    if (isset( $_GET['Question4'])  ) {
+                        $q4 = $_GET['Question4'];
+                    }
+
+                    if ($q4 == "flavor"){
+                        echo "<br> answer is correct!";
+                    } else {
+                        echo "<br> incorrect!";
+                    }
+
+echo <<< HTML
+                                          
+                      <br><br><input id="saveButton" type="submit" name="submit" value="Save">  
+                    
+                </div>
+            </form> 
             
             
         </div>      <!--   end questions div   -->

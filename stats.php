@@ -8,12 +8,14 @@ session_start();
 include("library.php");
 
 if ($_SESSION['userin'] == true) {
-    echo "logged in";
+    //echo "logged in";
 } else {
     header("Location: index.php");
     exit();
 }
 
+// variables
+$guinness = 9;
 
 echo <<< HTML
 
@@ -32,7 +34,7 @@ echo <<< HTML
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Beer', 'Votes'],
-          ['Guinness',          5],
+          ['Guinness',          1],
           ['Blue Moon',         2],
           ['Samuel Adams',      5],
           ['Heineken',          5],

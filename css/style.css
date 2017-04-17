@@ -486,3 +486,19 @@ font-family: 'Pompiere', cursive;
 	"Century Gothic", CenturyGothic,
 	AppleGothic, sans-serif;
 }
+
+#deleteButton {
+	background: saddlebrown;
+	width: 195px;
+	text-align: center;
+	position: relative;
+	margin: auto;
+	border-radius: 5px;
+	color: white;
+	border: rgb(0, 0, 0);
+	height: 35px;
+	font-size: 20px;
+	font-family: "Avant Garde", Avantgarde,
+	"Century Gothic", CenturyGothic,
+	AppleGothic, sans-serif;
+}

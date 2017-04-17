@@ -12,7 +12,7 @@ session_start();
 include("library.php");
 
 if ($_SESSION['userin'] == true) {
-    echo "logged in";
+    //echo "logged in";
 } else {
     header("Location: index.php");
     exit();
@@ -272,67 +272,136 @@ echo <<< HTML
             
                 <div id="space">
                 </div>
-            
-            <div id="Q1">
-                <p>
-                    1. Which beer has the lowest amount of alcohol?
-                </p>
                 
-                <select id="selectItBABY">
-                  <option value="guinness">Guinness</option>
-                  <option value="heineken">Heineken</option>
-                  <option value="bluemoon">Blue Moon</option>      <!-- answer -->
-                  <option value="stone">Stone Pale Ale</option>
-                </select>
-            </div>
+            <form id="selectFavBeer" action="$PHP_SELF" method="get">
             
-                <div id="space">
+                <div id="Q1">
+                    <p>
+                        1. Which beer has the lowest amount of alcohol?
+                    </p>
+                    
+                    
+                      <input type="radio" name="Question1" value="guinness">Guinness</input>
+                      <input type="radio" name="Question1" value="heineken">Heineken</input>
+                      <input type="radio" name="Question1" value="bluemoon">Blue Moon</input>      <!-- answer -->
+                      <input type="radio" name="Question1" value="stone">Stone Pale Ale</input>
+                    
+                    
+HTML;
+                    $q1 = "";
+
+                    if (isset( $_GET['Question1'])  ) {
+                        $q1 = $_GET['Question1'];
+                    }
+
+                    if ($q1 == "bluemoon"){
+                        echo "<br> answer is correct!";
+                    } else {
+                        echo "<br> incorrect!";
+                    }
+
+echo <<< HTML
+                    
+                </div>
+                
+                    <div id="space">
+                    </div>
+                
+                <div id="Q2">
+                    <p>
+                        2. Which beer was introduced in the USA first? 
+                    </p>
+                    
+                    
+                      <input type="radio" name="Question2" value="sierra">Sierra Nevada</input>
+                      <input type="radio" name="Question2" value="hoegaarden">Hoegaarden</input>
+                      <input type="radio" name="Question2" value="pilsner">Pilsner Urquell</input>
+                      <input type="radio" name="Question2" value="yuengling">Yuengling</input>      <!-- answer -->
+                   
+                    
+HTML;
+                    $q2 = "";
+
+                    if (isset( $_GET['Question2'])  ) {
+                        $q2 = $_GET['Question2'];
+                    }
+
+                    if ($q2 == "yuengling"){
+                        echo "<br> answer is correct!";
+                    } else {
+                        echo "<br> incorrect!";
+                    }
+
+echo <<< HTML
+                    
+                </div>
+                
+                    <div id="space">
+                    </div>
+                
+                <div id="Q3">
+                    <p>
+                        3. Which beer has the highest amount of alcohol?
+                    </p>
+                    
+                  
+                      <input type="radio" name="Question3" value="heineken">Heineken</input>
+                      <input type="radio" name="Question3" value="guinness">Guinness</input>      <!-- answer -->
+                      <input type="radio" name="Question3" value="stella">Stella Artois</input>
+                      <input type="radio" name="Question3" value="stone">Stone Pale Ale</input>
+                    
+HTML;
+                    $q3 = "";
+
+                    if (isset( $_GET['Question3'])  ) {
+                        $q3 = $_GET['Question3'];
+                    }
+
+                    if ($q3 == "guinness"){
+                        echo "<br> answer is correct!";
+                    } else {
+                        echo "<br> incorrect!";
+                    }
+
+echo <<< HTML
+                    
+                </div>
+                
+                    <div id="space">
+                    </div>
+                
+                <div id="Q4">
+                    <p>
+                        4. _______ is an American Lager introduced in 1844.
+                    </p>
+                    
+                    
+                    <input type="radio" name="Question4" value="budweiser">Budweiser</input>
+                    <input type="radio" name="Question4" value="rock">Rolling Rock</input>      
+                    <input type="radio" name="Question4" value="samueladams">Samuel Adams</input>
+                    <input type="radio" name="Question4" value="pbr">Pabst Blue Ribbon</input>       <!-- answer -->      
+                   
+                   
+HTML;
+                    $q4 = "";
+
+                    if (isset( $_GET['Question4'])  ) {
+                        $q4 = $_GET['Question4'];
+                    }
+
+                    if ($q4 == "pbr"){
+                        echo "<br> answer is correct!";
+                    } else {
+                        echo "<br> incorrect!";
+                    }
+
+echo <<< HTML
+                   
+                   <br><br><input id="saveButton" type="submit" name="submit" value="Save">  
+                   
                 </div>
             
-            <div id="Q2">
-                <p>
-                    2. Which beer was introduced in the USA first? 
-                </p>
-                
-                <select id="selectItBABY">
-                  <option value="sierra">Sierra Nevada</option>
-                  <option value="hoegaarden">Hoegaarden</option>
-                  <option value="pilsner">Pilsner Urquell</option>
-                  <option value="yuengling">Yuengling</option>      <!-- answer -->
-                </select>
-            </div>
-            
-                <div id="space">
-                </div>
-            
-            <div id="Q3">
-                <p>
-                    3. Which beer has the highest amount of alcohol?
-                </p>
-                
-                <select id="selectItBABY">
-                  <option value="heineken">Heineken</option>
-                  <option value="guinness">Guinness</option>      <!-- answer -->
-                  <option value="stella">Stella Artois</option>
-                  <option value="stone">Stone Pale Ale</option>
-                </select>
-            </div>
-            
-                <div id="space">
-                </div>
-            
-            <div id="Q4">
-                <p>
-                    4. _______ is an American Lager introduced in 1844.
-                </p>
-                
-                <select id="selectItBABY">
-                  <option value="budweiser">Budweiser</option>
-                  <option value="rock">Rolling Rock</option>      
-                  <option value="samueladams">Samuel Adams</option>
-                  <option value="pbr">Pabst Blue Ribbon</option>       <!-- answer -->      
-                </select>
-            </div>
+            </form>
             
         
             <div id="space">        <!-- end of questions div   -->
