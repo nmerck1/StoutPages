@@ -105,6 +105,9 @@ function setFavBeer($uname, $beer){
     $result =mysqli_query(connectDB(),
         "UPDATE ACCOUNT SET ACC_BEER = '$beer' WHERE ACC_UNAME = '$uname'; ");
 
+
+
+
     if ( $result ){
         return true;
     }
