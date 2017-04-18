@@ -10,3 +10,4 @@ include("library.php");
 
 getBeerVotes('Guinness');
 
+//echo "hello from the other side";

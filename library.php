@@ -92,6 +92,7 @@ function pullVotes($beer){
     else {
         return NULL;
     }
+
 }
 
 /*   Function:          setFavBeer
@@ -120,6 +121,8 @@ function setFavBeer($uname, $beer){
 
 function getFirstName($uname){
 
+    $con = connectDB();
+
     $sql = "SELECT ACC_FNAME FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ";
     $result =mysqli_query(connectDB(), $sql);
 
@@ -133,6 +136,8 @@ function getFirstName($uname){
         echo "0 results";
     }
 
+    mysqli_close($con);
+
 }
 
 /*   Function:          getLastName
@@ -141,6 +146,9 @@ function getFirstName($uname){
  */
 
 function getLastName($uname){
+
+    $con = connectDB();
+
     $sql = "SELECT ACC_LNAME FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ";
     $result =mysqli_query(connectDB(), $sql);
 
@@ -154,6 +162,9 @@ function getLastName($uname){
         echo "0 results";
     }
 
+    mysqli_close($con);
+
+
 }
 
 /*   Function:          getFavBeer
@@ -162,6 +173,9 @@ function getLastName($uname){
  */
 
 function getFavBeer($uname){
+
+    $con = connectDB();
+
     $sql = "SELECT ACC_BEER FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ";
     $result =mysqli_query(connectDB(), $sql);
 
@@ -175,6 +189,8 @@ function getFavBeer($uname){
         echo "0 results";
     }
 
+    mysqli_close($con);
+
 }
 
 
@@ -184,6 +200,9 @@ function getFavBeer($uname){
  */
 
 function getBeerVotes($beerName){
+
+    $con = connectDB();
+
     $sql = "SELECT STAT_VOTES FROM STATS WHERE STAT_NAME = '$beerName'; ";
     $result =mysqli_query(connectDB(), $sql);
 
@@ -196,6 +215,8 @@ function getBeerVotes($beerName){
     } else {
         echo "0 results";
     }
+
+    mysqli_close($con);
 }
 
 /*   Function:          deleteAccount
@@ -204,6 +225,7 @@ function getBeerVotes($beerName){
  */
 
 function deleteAccount($uname){
+
     $sql = "DELETE FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ";
     $result =mysqli_query(connectDB(), $sql);
 
@@ -212,5 +234,41 @@ function deleteAccount($uname){
     } else {
         return false;
     }
-
 }
+
+/*   Function:          calcPerc
+ *   Last modified:     4-17-17
+ *   Description:       returns the percentage of the amount of votes -provided the beer name.
+ */
+
+/*
+function calcPerc($beer){
+    // get all the votes from all the other beers
+    $guinness = getBeerVotes('Guinness');
+    $bluemoon = getBeerVotes('Blue Moon');
+    $samuel =   getBeerVotes('Samuel Adams');
+    $heineken = getBeerVotes('Heineken');
+    $corona =   getBeerVotes('Corona');
+    $stella = getBeerVotes('Stella Artois');
+    $budweiser = getBeerVotes('Budweiser');
+    $sierra = getBeerVotes('Sierra Nevada');
+    $yuengling = getBeerVotes('Yuengling');
+    $hoegaarden = getBeerVotes('Hoegaarden');
+    $pilsner = getBeerVotes('Pilsner Urquell');
+    $pbr = getBeerVotes('Pabst Blue Ribbon');
+    $coors = getBeerVotes('Coors Light');
+    $stone = getBeerVotes('Stone Pale Ale');
+    $rock = getBeerVotes('Rolling Rock');
+
+    $getVotes = getBeerVotes($beer);
+
+    $totalVotes = ($guinness + $bluemoon + $samuel + $heineken + $corona + $stella + $budweiser + $sierra + $yuengling +
+                    $hoegaarden + $pilsner + $pbr + $coors + $stone + $rock);
+
+    $percentage = ($getVotes / $totalVotes);
+
+    //return $percentage;
+    return number_format($percentage ,2)."<br>";
+}
+
+*/
