@@ -76,6 +76,23 @@ function userExists($un, $txt){
     }
 }
 
+/*   Function:          usernameTaken
+ *   Last modified:     4-19-17
+ *   Description:       returns true if $uname and database query are the same.
+ */
+
+function usernameTaken($uname){
+    $result =mysqli_query(connectDB(),
+        "SELECT * FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ");
+
+    if ( mysqli_num_rows($result) == 1 ){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 /*   Function:          pullVotes
  *   Last modified:     4-14-17
  *   Description:       returns the amount of votes based on the beer name given: '$beer'.

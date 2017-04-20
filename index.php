@@ -32,7 +32,7 @@ if (isset($_GET['createUsername']) && isset($_GET['firstName']) && isset($_GET['
     $registerPassword = $_GET['registerPassword'];
     $reenterPassword = $_GET['reenterPassword'];
 
-    echo "variables are set". "<br>";
+    //echo "variables are set". "<br>";
 }
 
 if (isset($_GET['lUsername']) && isset($_GET['lPass'])) {
@@ -129,29 +129,34 @@ echo <<< HTML
                         <input id="create" type="submit" value="Create Account" >
                     </tr>
                 </table>
-            </form>
-	    </div>
+                    <p id="createAccMsg">
 HTML;
             /*      REGISTER        */
 
             $check = 0;
 
+            echo "<br>";
+
             if ( isValidPass($createUsername, $registerPassword, $reenterPassword) == true ){
-                echo "valid password. Meets all requirements <br>";
+                //echo "valid password. Meets all requirements <br>";
                 ++$check;
             }
             else {
-                echo "not a valid password. Must be at least 4 letters, contain at least one capital letter and a number. <br>";
-                echo "(cannot contain any special characters). <br>";
+                echo "Password must be at least 4 letters, contain at least one capital letter and a number. <br>";
+                echo "(cannot contain any special characters). <br><br>";
+            }
+
+            if ( usernameTaken($createUsername) == true){
+                echo "Username is taken. <br><br>";
             }
 
             if ( isValidUsername($createUsername, $registerPassword) == true ){
                 //echo "valid username <br>";
                 ++$check;
-                echo "checks: $check";
+                //echo "checks: $check";
             }
             else {
-                echo "not a valid username, or already exists. Must be at least 4 letters long and contain at least one number <br>";
+                echo "Username must be at least 4 letters long and contain at least one number <br>";
             }
 
             if ( $check > 1 ){
@@ -162,15 +167,17 @@ HTML;
                                       VALUES ('$createUsername', '$registerPassword', '$firstName', '$lastName'); ";
                 mysqli_query(connectDB(), $sql);
 
-                echo "account created!";
+                echo "Account created!";
 
-                header("Location: index.php");
-                exit();
+                //header("Location: index.php");
+                //exit();
             }
 
 
 echo <<< HTML
-	    
+                </p>
+            </form>
+	    </div>
 	</section>
 	
 

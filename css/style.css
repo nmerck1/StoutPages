@@ -526,3 +526,7 @@ font-family: 'Pompiere', cursive;
 	 margin: auto;
 	 text-align: center;
  }
+
+#createAccMsg {
+	color: red;
+}
