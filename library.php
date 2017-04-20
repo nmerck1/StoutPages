@@ -95,27 +95,64 @@ function pullVotes($beer){
 
 }
 
-/*   Function:          setFavBeer
- *   Last modified:     4-14-17
- *   Description:       returns the amount of votes based on the beer name given: '$beer'.
+/*   Function:          setPrevBeer
+ *   Last modified:     4-18-17
+ *   Description:       sets the previous beer in the database associated with $uname.
  */
 
-function setFavBeer($uname, $beer){
+function setPrevBeer($uname, $beerName){
 
-    $result =mysqli_query(connectDB(),
-        "UPDATE ACCOUNT SET ACC_BEER = '$beer' WHERE ACC_UNAME = '$uname'; ");
+    // $currentBeer = getCurrentForPrev($uname);
+
+    // update account associated with $uname's previous beer to $beerName.
+   $result = mysqli_query(connectDB(),
+       "UPDATE ACCOUNT SET ACC_PREV_BEER = '$beerName' WHERE ACC_UNAME = '$uname'; ");
 
 
-
-
-    if ( $result ){
+    if ($result){
         return true;
-    }
-    else {
+    } else {
         return false;
     }
-
 }
+
+/*   Function:          setCurrentBeer
+ *   Last modified:     4-18-17
+ *   Description:       sets the current and previous beer in the database associated with $uname.
+ */
+
+function setCurrentBeer($uname, $beerName){
+    // update account associated with $uname's previous beer to $beerName.
+    $result = mysqli_query(connectDB(),
+        "UPDATE ACCOUNT SET ACC_PREV_BEER = ACC_BEER WHERE ACC_UNAME = '$uname'; ");
+
+    // update previous beer votes associated with the $uname
+    $result2 = mysqli_query(connectDB(),
+        "UPDATE STATS
+          INNER JOIN ACCOUNT
+          ON ACCOUNT.ACC_PREV_BEER=STATS.STAT_NAME
+          SET STATS.STAT_VOTES = STATS.STAT_VOTES - 1
+          WHERE ACCOUNT.ACC_UNAME = '$uname'; ");
+
+    // update account associated with $uname's previous beer to $beerName.
+    $result3 = mysqli_query(connectDB(),
+            "UPDATE ACCOUNT SET ACC_BEER = '$beerName' WHERE ACC_UNAME = '$uname'; ");
+
+    // update current beer votes associated with the $uname
+    $result4 = mysqli_query(connectDB(),
+        "UPDATE STATS
+            INNER JOIN ACCOUNT
+            ON ACCOUNT.ACC_BEER=STATS.STAT_NAME
+            SET STATS.STAT_VOTES = STATS.STAT_VOTES + 1
+            WHERE ACCOUNT.ACC_UNAME = '$uname'; ");
+
+    if ($result && $result2 && $result3 && $result4){
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 /*   Function:          getFirstName
  *   Last modified:     4-16-17
@@ -170,12 +207,12 @@ function getLastName($uname){
 
 }
 
-/*   Function:          getFavBeer
- *   Last modified:     4-16-17
- *   Description:       returns the favorite beer associated with the username provided.
+/*   Function:          getCurrentBeer
+ *   Last modified:     4-18-17
+ *   Description:       returns the current favorite beer associated with the username provided.
  */
 
-function getFavBeer($uname){
+function getCurrentBeer($uname){
 
     $con = connectDB();
 
@@ -186,16 +223,73 @@ function getFavBeer($uname){
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            echo "Favorite Beer: ". $row["ACC_BEER"];
+            echo "". $row["ACC_BEER"];
         }
     } else {
         echo "0 results";
     }
 
+
     mysqli_close($con);
 
 }
 
+/*   Function:          getPrevBeer
+ *   Last modified:     4-18-17
+ *   Description:       returns the previous favorite beer associated with the username provided.
+ */
+
+function getPrevBeer($uname){
+
+    $con = connectDB();
+
+    $sql = "SELECT ACC_PREV_BEER FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ";
+    $result =mysqli_query(connectDB(), $sql);
+
+
+    if ($result->num_rows == 1) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "". $row["ACC_PREV_BEER"];
+        }
+    } else {
+        echo "0 results";
+    }
+
+
+    mysqli_close($con);
+
+}
+
+/*   Function:          checkIfCurrent
+ *   Last modified:     4-18-17
+ *   Description:       returns true if the beer selected from the form is the same as the one currently in the database
+ *                      associated with the username provided.
+ */
+
+function checkIfCurrent($uname, $beerName){
+
+    // get a result
+    $result = mysqli_query(connectDB(),
+        "SELECT ACC_BEER FROM ACCOUNT WHERE ACC_BEER = '$beerName' AND ACC_UNAME = '$uname'; ");
+
+    // convert to string
+    if ($result->num_rows == 1) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "". $row["ACC_BEER"];
+        }
+    } else {
+        echo "0 results";
+    }
+
+    if ($result == true){
+        return true;
+    } else {
+        return false;
+    }
+
+}
 
 /*   Function:          getBeerVotes
  *   Last modified:     4-16-17
@@ -232,7 +326,7 @@ function deleteAccount($uname){
     $sql = "DELETE FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ";
     $result =mysqli_query(connectDB(), $sql);
 
-    if ($result->num_rows == 1) {
+    if ($result) {
        return true;
     } else {
         return false;

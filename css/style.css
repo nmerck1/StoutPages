@@ -302,6 +302,8 @@ p {
 	min-height: 250px;
 	font-size: 35px;
 	text-indent: 0px;
+	word-spacing: 0px;
+	text-align: center;
 }
 
 #processPic {
@@ -515,3 +517,12 @@ font-family: 'Pompiere', cursive;
 #percTH {
 	width: 200px;
 }
+
+#noSpace {
+	word-spacing: 0px;
+}
+
+#tea {
+	 margin: auto;
+	 text-align: center;
+ }

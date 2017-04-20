@@ -1,0 +1,76 @@
+
+
+function getCurrentBeer($uname){
+    // select the current beer associated with the $uname's account from the database.
+    $result = mysqli_query(connectDB(),
+        "SELECT ACC_BEER FROM ACCOUNT WHERE ACC_UNAME = '$uname'; ");
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo " ". $row["ACC_BEER"];
+        }
+    } else {
+        echo "0 results";
+    }
+}
+
+function setFavBeer($uname, $beerName)
+
+	$currentBeer = getCurrentBeer($uname);
+	$prevBeer = getPrevBeer($uname);
+
+
+	if ($beerName is NOT the same as the current beer) then
+
+		if ($prevBeer is NOT NULL) then
+			$prevBeerVotes = getPrevBeerVotes($beerName);
+			$prevBeerVotes = $prevBeerVotes - 1;
+			update statistics table in database with $prevBeerVotes associated with $prevBeer.
+		// end if statement
+
+		$prevBeer = $currentBeer;
+		$currentBeer = $beerName;
+
+
+		$currentBeerVotes = getCurrentBeerVotes($beerName);
+		$currentBeerVotes = $currentBeerVotes + 1;
+		update statistics table in database with $currentBeerVotes associated with $currentBeer.
+
+	else
+
+		print "beer is already selected as current favorite"
+
+	//end if statement
+
+//end function setFavBeer()
+
+
+function getCurrentBeer($uname)
+
+	select the current beer associated with the $uname's account from the database.
+	return that name.
+
+// end function getCurrentBeer()
+
+
+function setCurrentBeer($uname)
+
+	update the current beer associated with the $uname's account from the database.
+
+// end function setCurrentBeer()
+
+
+function getPrevBeer($uname)
+
+	select the previous beer associated with the $uname's account from the database.
+	return that name.
+
+// end getPrevBeer()
+
+
+function setPrevBeer($uname)
+
+	update the previous beer associated with the $uname's account from the database.
+
+// end setPrevBeer()

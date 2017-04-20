@@ -77,6 +77,23 @@ echo <<< HTML
                 <img id="profileIMG" src="img/profileimg.png" align="top" hspace="20">
              
 HTML;
+
+                $beerName = "";
+
+                if (isset($_GET['beerName']) && $_GET['beerName']!=NULL) {
+                    $beerName = $_GET['beerName'];
+
+                        // check if current beer is able to stored
+                        if (setCurrentBeer($_SESSION['name'], $beerName) == true) {
+                            //echo "<br> current beer stored in account";
+                        } else {
+                           // echo "<br> current beer could not be saved to account";
+                        }
+
+                } else {
+                    // echo "<br> beer name from form is not set";
+                }
+
                 echo "<br>";
                 echo $_SESSION['name'];
                 echo "<br>";
@@ -84,8 +101,9 @@ HTML;
                 echo getFirstName($_SESSION['name']) ;
                 echo getLastName($_SESSION['name']);
 
-                echo "<br>";
-                echo  getFavBeer($_SESSION['name']);
+                echo "<br> Favorite Beer: ";
+                echo  getCurrentBeer($_SESSION['name']);
+
 
 echo <<< HTML
                 <br> <!--   nmerck1@tctc.edu    -->
@@ -94,44 +112,40 @@ echo <<< HTML
                 <br>
                 <br>    <!--   <button id="profPic">Change Profile Picture</button>      // ADD LATER   -->
                 <br>
-                <br>    Choose your favorite beer:   
+                <br>    What's your favorite beer?   
                 
-                <form id="selectFavBeer" action="$PHP_SELF" method="get">
+                <form id="selectFavBeer" action="profile.php" method="get">
                     <!-- <select id="selectItBABY">  -->
                       <input type="radio" name="beerName" value="Guinness">Guinness</input>
-                      <input type="radio" name="beerName" value="BlueMoon">Blue Moon</input>
-                      <input type="radio" name="beerName" value="SamuelAdams">Samuel Adams</input>
+                      <input type="radio" name="beerName" value="Blue Moon">Blue Moon</input>
+                      <input type="radio" name="beerName" value="Samuel Adams">Samuel Adams</input>
                       <input type="radio" name="beerName" value="Heineken">Heineken</input> 
                          
                       <input type="radio" name="beerName" value="Corona">Corona</input>
-                      <input type="radio" name="beerName" value="StellaArtois">Stella Artois</input>      
+                      <input type="radio" name="beerName" value="Stella Artois">Stella Artois</input>      
                       <input type="radio" name="beerName" value="Budweiser">Budweiser</input>
-                      <input type="radio" name="beerName" value="SierraNevada">Sierra Nevada</input>  
+                      <input type="radio" name="beerName" value="Sierra Nevada">Sierra Nevada</input>  
                       
                       <input type="radio" name="beerName" value="Yuengling">Yuengling</input>
                       <input type="radio" name="beerName" value="Hoegaarden">Hoegaarden</input>      
-                      <input type="radio" name="beerName" value="PilsnerUrquell">Pilsner Urquell</input>
-                      <input type="radio" name="beerName" value="PBR">Pabst Blue Ribbon</input>  
+                      <input type="radio" name="beerName" value="Pilsner Urquell">Pilsner Urquell</input>
+                      <input type="radio" name="beerName" value="Pabst Blue Ribbon">Pabst Blue Ribbon</input>  
                       
-                      <input type="radio" name="beerName" value="CoorsLight">Coors Light</input>
-                      <input type="radio" name="beerName" value="StonePaleAle">Stone Pale Ale</input>      
-                      <input type="radio" name="beerName" value="RollingRock">Rolling Rock</input>
+                      <input type="radio" name="beerName" value="Coors Light">Coors Light</input>
+                      <input type="radio" name="beerName" value="Stone Pale Ale">Stone Pale Ale</input>      
+                      <input type="radio" name="beerName" value="Rolling Rock">Rolling Rock</input>
+                      
+                      <!--
+                      <br> <br>
+                      <p id="tea"><input type="radio" name="delete" value="Tea">"Eh, I'm more of a tea person"</input></p> -->
                     <!--  </select>  -->
+                    
                     
                     <br><br><input id="saveButton" type="submit" name="submit" value="Save">  
                 </form>
                 
 HTML;
-                $beerName = "";
 
-                if (isset($_GET['beerName']) && $_GET['beerName']!=NULL){
-                    $beerName = $_GET['beerName'];
-
-                    if( setFavBeer($_SESSION['name'], $beerName) == true) {
-                        echo $beerName . " saved to account";
-                        header("Location: profile.php");
-                    }
-                }
 
 
 echo <<< HTML
@@ -141,15 +155,7 @@ echo <<< HTML
         </div>
         
             <div id="space">
-            </div>
-            
-            <!--                                                // ADD LATER
-        <form action="index.php" method="get">
-            <br><br><input id="saveButton" type="submit" name="delete" value="Delete Account"> 
-        </form>
-            -->
-        
-        
+            </div>   
 HTML;
                 $delete = "";
 
@@ -157,22 +163,16 @@ HTML;
                     $delete = $_GET['delete'];
                 }
 
-                if ($delete == "Delete Account"){
+                if ($delete == "Tea"){
                     deleteAccount($_SESSION['name']);
-                    echo "account deleted?";
-
-                    header("index.php");
-                    exit();
-
-
+                    //header("Location: index.php");
+                    //exit();
                 } else {
                     //echo "<br> account could not be deleted!";
                 }
 
 
 echo <<< HTML
-
-        
 	</section>
 	
 	<div id="lineBottom">
