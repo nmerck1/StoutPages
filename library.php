@@ -13,7 +13,7 @@
  */
 
 function connectDB(){
-    $con = mysqli_connect("localhost", "CIT", "CPT283", "StoutPages");
+    $con = mysqli_connect("localhost", "CIT", "CPT283", "php2016");  // StoutPages (when using localhost
 
     if (!$con){
         die("failed to connect to database  D;  <br>" . mysqli_connect_error() );

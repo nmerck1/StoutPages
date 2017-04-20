@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fd7d511-5b4a-47b8-ad10-8898296b0af4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library.php" afterPath="$PROJECT_DIR$/library.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -227,29 +224,29 @@
       <file leaf-file-name="library.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="15" column="104" lean-forward="false" selection-start-line="15" selection-start-column="104" selection-end-line="15" selection-end-column="104" />
               <folding>
                 <element signature="e#7#88#0#PHP" expanded="true" />
-                <marker date="1492660675021" expanded="true" signature="1097:1142" ph="SELECT 1 FRO... ntm_user" />
-                <marker date="1492660675021" expanded="true" signature="1654:1721" ph="SELECT * FRO... ntm_user" />
-                <marker date="1492660675021" expanded="true" signature="2074:2122" ph="SELECT * FRO... ACCOUNT" />
-                <marker date="1492660675021" expanded="true" signature="2478:2532" ph="SELECT * FRO... STATS" />
-                <marker date="1492660675021" expanded="true" signature="3027:3100" ph="UPDATE ACCOU... " />
-                <marker date="1492660675021" expanded="true" signature="3534:3604" ph="UPDATE ACCOU... " />
-                <marker date="1492660675021" expanded="true" signature="3722:3913" ph="UPDATE STATS... " />
-                <marker date="1492660675021" expanded="true" signature="4049:4117" ph="UPDATE ACCOU... " />
-                <marker date="1492660675021" expanded="true" signature="4234:4428" ph="UPDATE STATS... " />
-                <marker date="1492660675021" expanded="true" signature="4784:4840" ph="SELECT ACC_F... ACCOUNT" />
-                <marker date="1492660675021" expanded="true" signature="5359:5415" ph="SELECT ACC_L... ACCOUNT" />
-                <marker date="1492660675021" expanded="true" signature="5953:6008" ph="SELECT ACC_B... ACCOUNT" />
-                <marker date="1492660675021" expanded="true" signature="6539:6599" ph="SELECT ACC_P... ACCOUNT" />
-                <marker date="1492660675021" expanded="true" signature="7271:7353" ph="SELECT ACC_B... ACCOUNT" />
-                <marker date="1492660675021" expanded="true" signature="7277:7353" ph="UPDATE ACCOU... " />
-                <marker date="1492660675021" expanded="true" signature="7920:7927" ph="SELECT ACC_B... ACCOUNT" />
-                <marker date="1492660675021" expanded="true" signature="7920:7978" ph="SELECT STAT_... STATS" />
-                <marker date="1492660675021" expanded="true" signature="8485:8531" ph="DELETE FROM " />
-                <marker date="1492660675021" expanded="true" signature="8491:8531" ph="SELECT A FRO... ACCOUNT" />
+                <marker date="1492666220044" expanded="true" signature="1131:1176" ph="SELECT 1 FRO... ntm_user" />
+                <marker date="1492666220044" expanded="true" signature="1688:1755" ph="SELECT * FRO... ntm_user" />
+                <marker date="1492666220044" expanded="true" signature="2108:2156" ph="SELECT * FRO... ACCOUNT" />
+                <marker date="1492666220044" expanded="true" signature="2512:2566" ph="SELECT * FRO... STATS" />
+                <marker date="1492666220044" expanded="true" signature="3061:3134" ph="UPDATE ACCOU... " />
+                <marker date="1492666220044" expanded="true" signature="3568:3638" ph="UPDATE ACCOU... " />
+                <marker date="1492666220044" expanded="true" signature="3756:3947" ph="UPDATE STATS... " />
+                <marker date="1492666220044" expanded="true" signature="4083:4151" ph="UPDATE ACCOU... " />
+                <marker date="1492666220044" expanded="true" signature="4268:4462" ph="UPDATE STATS... " />
+                <marker date="1492666220044" expanded="true" signature="4818:4874" ph="SELECT ACC_F... ACCOUNT" />
+                <marker date="1492666220044" expanded="true" signature="5393:5449" ph="SELECT ACC_L... ACCOUNT" />
+                <marker date="1492666220044" expanded="true" signature="5987:6042" ph="SELECT ACC_B... ACCOUNT" />
+                <marker date="1492666220044" expanded="true" signature="6573:6633" ph="SELECT ACC_P... ACCOUNT" />
+                <marker date="1492666220044" expanded="true" signature="7305:7387" ph="SELECT ACC_B... ACCOUNT" />
+                <marker date="1492666220044" expanded="true" signature="7311:7387" ph="UPDATE ACCOU... " />
+                <marker date="1492666220044" expanded="true" signature="7954:7961" ph="SELECT ACC_B... ACCOUNT" />
+                <marker date="1492666220044" expanded="true" signature="7954:8012" ph="SELECT STAT_... STATS" />
+                <marker date="1492666220044" expanded="true" signature="8519:8565" ph="DELETE FROM " />
+                <marker date="1492666220044" expanded="true" signature="8525:8565" ph="SELECT A FRO... ACCOUNT" />
               </folding>
             </state>
           </provider>
@@ -258,8 +255,8 @@
       <file leaf-file-name="MYSQL_CODE.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/MYSQL_CODE.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="98">
+              <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -328,9 +325,9 @@
         <option value="$PROJECT_DIR$/assets/MYSQL_CODE.sql" />
         <option value="$PROJECT_DIR$/deleted/pseudocode.txt" />
         <option value="$PROJECT_DIR$/profile.php" />
-        <option value="$PROJECT_DIR$/library.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/library.php" />
       </list>
     </option>
   </component>
@@ -508,12 +505,12 @@
       <workItem from="1492012417325" duration="34339000" />
       <workItem from="1492115881624" duration="3505000" />
       <workItem from="1492123084354" duration="8124000" />
-      <workItem from="1492461814610" duration="38431000" />
+      <workItem from="1492461814610" duration="40194000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166939000" />
+    <option name="totallyTimeSpent" value="168702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1497,35 +1494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding>
-            <element signature="e#7#88#0#PHP" expanded="true" />
-            <marker date="1492660675021" expanded="true" signature="1097:1142" ph="SELECT 1 FRO... ntm_user" />
-            <marker date="1492660675021" expanded="true" signature="1654:1721" ph="SELECT * FRO... ntm_user" />
-            <marker date="1492660675021" expanded="true" signature="2074:2122" ph="SELECT * FRO... ACCOUNT" />
-            <marker date="1492660675021" expanded="true" signature="2478:2532" ph="SELECT * FRO... STATS" />
-            <marker date="1492660675021" expanded="true" signature="3027:3100" ph="UPDATE ACCOU... " />
-            <marker date="1492660675021" expanded="true" signature="3534:3604" ph="UPDATE ACCOU... " />
-            <marker date="1492660675021" expanded="true" signature="3722:3913" ph="UPDATE STATS... " />
-            <marker date="1492660675021" expanded="true" signature="4049:4117" ph="UPDATE ACCOU... " />
-            <marker date="1492660675021" expanded="true" signature="4234:4428" ph="UPDATE STATS... " />
-            <marker date="1492660675021" expanded="true" signature="4784:4840" ph="SELECT ACC_F... ACCOUNT" />
-            <marker date="1492660675021" expanded="true" signature="5359:5415" ph="SELECT ACC_L... ACCOUNT" />
-            <marker date="1492660675021" expanded="true" signature="5953:6008" ph="SELECT ACC_B... ACCOUNT" />
-            <marker date="1492660675021" expanded="true" signature="6539:6599" ph="SELECT ACC_P... ACCOUNT" />
-            <marker date="1492660675021" expanded="true" signature="7271:7353" ph="SELECT ACC_B... ACCOUNT" />
-            <marker date="1492660675021" expanded="true" signature="7277:7353" ph="UPDATE ACCOU... " />
-            <marker date="1492660675021" expanded="true" signature="7920:7927" ph="SELECT ACC_B... ACCOUNT" />
-            <marker date="1492660675021" expanded="true" signature="7920:7978" ph="SELECT STAT_... STATS" />
-            <marker date="1492660675021" expanded="true" signature="8485:8531" ph="DELETE FROM " />
-            <marker date="1492660675021" expanded="true" signature="8491:8531" ph="SELECT A FRO... ACCOUNT" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9">
@@ -1571,10 +1539,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/library.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="104" lean-forward="false" selection-start-line="15" selection-start-column="104" selection-end-line="15" selection-end-column="104" />
+          <folding>
+            <element signature="e#7#88#0#PHP" expanded="true" />
+            <marker date="1492666220044" expanded="true" signature="1131:1176" ph="SELECT 1 FRO... ntm_user" />
+            <marker date="1492666220044" expanded="true" signature="1688:1755" ph="SELECT * FRO... ntm_user" />
+            <marker date="1492666220044" expanded="true" signature="2108:2156" ph="SELECT * FRO... ACCOUNT" />
+            <marker date="1492666220044" expanded="true" signature="2512:2566" ph="SELECT * FRO... STATS" />
+            <marker date="1492666220044" expanded="true" signature="3061:3134" ph="UPDATE ACCOU... " />
+            <marker date="1492666220044" expanded="true" signature="3568:3638" ph="UPDATE ACCOU... " />
+            <marker date="1492666220044" expanded="true" signature="3756:3947" ph="UPDATE STATS... " />
+            <marker date="1492666220044" expanded="true" signature="4083:4151" ph="UPDATE ACCOU... " />
+            <marker date="1492666220044" expanded="true" signature="4268:4462" ph="UPDATE STATS... " />
+            <marker date="1492666220044" expanded="true" signature="4818:4874" ph="SELECT ACC_F... ACCOUNT" />
+            <marker date="1492666220044" expanded="true" signature="5393:5449" ph="SELECT ACC_L... ACCOUNT" />
+            <marker date="1492666220044" expanded="true" signature="5987:6042" ph="SELECT ACC_B... ACCOUNT" />
+            <marker date="1492666220044" expanded="true" signature="6573:6633" ph="SELECT ACC_P... ACCOUNT" />
+            <marker date="1492666220044" expanded="true" signature="7305:7387" ph="SELECT ACC_B... ACCOUNT" />
+            <marker date="1492666220044" expanded="true" signature="7311:7387" ph="UPDATE ACCOU... " />
+            <marker date="1492666220044" expanded="true" signature="7954:7961" ph="SELECT ACC_B... ACCOUNT" />
+            <marker date="1492666220044" expanded="true" signature="7954:8012" ph="SELECT STAT_... STATS" />
+            <marker date="1492666220044" expanded="true" signature="8519:8565" ph="DELETE FROM " />
+            <marker date="1492666220044" expanded="true" signature="8525:8565" ph="SELECT A FRO... ACCOUNT" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/MYSQL_CODE.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="98">
+          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding />
         </state>
       </provider>
